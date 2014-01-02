@@ -150,8 +150,8 @@ public class Emoji {
     BitmapFactory.Options options = new BitmapFactory.Options();
 
     options.inScaled           = true;
-//    options.inDensity          = 64;
-    options.inTargetDensity    = context.getResources().getDimensionPixelSize(R.dimen.emoji_size);
+    options.inDensity          = context.getResources().getDimensionPixelSize(R.dimen.emoji_size);
+    options.inTargetDensity    = context.getResources().getDisplayMetrics().densityDpi;
     options.inSampleSize       = 1;
     options.inJustDecodeBounds = false;
 
